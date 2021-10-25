@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        semana = [
+          "lunes",
+          "martes",
+          "miercoles",
+          "jueves",
+          "viernes",
+          "sabado",
+          "domingo",
+        ];
+    
+/*
+        cuandoRiego = semana.forEach((dia) => {
+          diasQueRiego.forEach((diaDeRegar) => {
+            if (dia == diaDeRegar) {
+              //console.log(dia);
+            }
+          });
+        });*/
+
+
+
+
+
+        diasQueRiego = ["miercoles", "sabado", "jueves"];
+
+        let regarHoy = function(hoy){
+            let resultado = [];
+
+            diasQueRiego.forEach(element => {
+                if (element == hoy) {
+                //console.log('tienes que regar hoy')
+                resultado.push(hoy);
+                }
+            });
+
+            if (resultado.length == 0) {
+                console.log("Que no toca mojar la planta coño");
+            }else{
+                console.log('Hoy',resultado[0],'es dia de regar >:)')
+            }
+
+        }
+        regarHoy('miercoles')
+
+        //array.forEach(element => {
+
+        //});
+    </script>
+  </body>
+</html>
