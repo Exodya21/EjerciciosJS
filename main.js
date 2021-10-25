@@ -58,8 +58,31 @@ function cambiarTitulo() {
 }
 
 //5to ej
+let pelicula = {
+    name: 'Harry Potter y la Piedra filosofal',
+    duration: '2h32min',
+    year: 2001,
+    type: 'Fantasia/Infantil',
+    image: 'harry.jpg'
+};
 
-let pelicula = [{
+function dibujarCard (objeto) {
+    let localizacion = document.getElementById('card');
+    let card = `
+            <img src= "${objeto.image}" alt=${objeto.nombre}> 
+            <article>
+                <p>${objeto.name}</p>
+                <p>${objeto.duration}</p>
+                <p>${objeto.year}</p>
+                <p>${objeto.type}</p>
+            </article>
+    `
+    localizacion.innerHTML = card;
+};
+
+dibujarCard(pelicula);
+
+/*let pelicula = [{
     name: 'Harry Potter y la Piedra filosofal',
     duration: '2h32min',
     year: 2001,
@@ -84,4 +107,4 @@ function dibujarCard (arrayObj) {
 
     localizacion.innerHTML = card;
 }
-dibujarCard(pelicula);
+dibujarCard(pelicula);*/
